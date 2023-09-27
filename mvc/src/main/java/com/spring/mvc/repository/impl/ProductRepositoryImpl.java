@@ -20,7 +20,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     }
 
     @Override
-    public Product getAllProductsByIdFromDB(int id) {
+    public Product getProductsByIdFromDB(int id) {
         // Tương tác database để lấy dữ liệu
         return MockData.getProductsFromDataMock().get(id);
     }

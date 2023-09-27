@@ -12,14 +12,14 @@
 <main>
     <section class="products">
         <h2>Sản phẩm</h2>
-        <form th:action="@{/product}" th:object="${product}" method="get">
+        <form th:action="@{/product/id}" method="get">
             <div class="form-group">
                 <label for="id">ID sản phẩm</label>
                 <input type="number" class="form-control" id="id" name="id">
             </div>
             <button type="submit" class="btn btn-primary">Tìm</button>
         </form>
-        <ul>
+        <ul th:if="productsList != null">
             <li th:each="product : ${productsList}">
                 <img th:src="@{/images/shirt1.jpg}" alt="Áo thun">
                 <h3 th:text="${product.getName()}"></h3>
@@ -27,6 +27,7 @@
                 <a href="#">Xem thêm</a>-->
             </li>
         </ul>
+        <p th:else="block">No data</p>
     </section>
     <section class="contact">
         <h2>Liên hệ</h2>

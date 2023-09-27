@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductRepository {
     List<Product> getAllProductsFromDB();
-    Product getAllProductsByIdFromDB(int id);
+    Product getProductsByIdFromDB(int id);
     List<Product> addProductToDB(Product product);
 
 }

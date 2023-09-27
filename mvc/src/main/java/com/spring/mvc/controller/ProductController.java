@@ -33,8 +33,17 @@ public class ProductController {
     // GET Request method để truy vấn dữ liệu
     public String getProduct(Model model) {
         List<Product> products = productService.getProductFromRepo();
+
         model.addAttribute("productsList", products);
         return "addProduct";
+    }
+
+    @GetMapping("/product/{id}")
+    // GET Request method để truy vấn dữ liệu
+    public String getProductById(@RequestParam int id, Model model) {
+
+        model.addAttribute("productsList", productService.getProductByIdFromRepo(id));
+        return "index";
     }
 
     @PostMapping("/product")

@@ -28,7 +28,13 @@ public class ProductService {
 
     public Product getProductByIdFromRepo(int id) {
         // Gọi repository để truy vấn data
-        return productRepository.getAllProductsByIdFromDB(id);
+        Product product = null;
+        try {
+            product = productRepository.getProductsByIdFromDB(id);
+        } catch (Exception e) {
+
+        }
+        return product;
     }
 
     public List<Product> addProduct(Product product) {
