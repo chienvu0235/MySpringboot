@@ -1,0 +1,23 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Thêm sản phẩm</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h1>Thêm sản phẩm</h1>
+
+  <form th:action="@{/product}" th:object="${product}" method="post">
+    <div class="form-group">
+      <label for="name">Tên sản phẩm</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="price">Giá sản phẩm</label>
+      <input type="number" class="form-control" id="price" name="price">
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+  </form>
+</div>
+</body>
+</html>

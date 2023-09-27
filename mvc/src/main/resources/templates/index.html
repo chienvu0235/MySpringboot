@@ -12,6 +12,13 @@
 <main>
     <section class="products">
         <h2>Sản phẩm</h2>
+        <form th:action="@{/product}" th:object="${product}" method="get">
+            <div class="form-group">
+                <label for="id">ID sản phẩm</label>
+                <input type="number" class="form-control" id="id" name="id">
+            </div>
+            <button type="submit" class="btn btn-primary">Tìm</button>
+        </form>
         <ul>
             <li th:each="product : ${productsList}">
                 <img th:src="@{/images/shirt1.jpg}" alt="Áo thun">
