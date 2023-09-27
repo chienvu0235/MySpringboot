@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang bán áo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Trang bán áo</h1>
+</header>
+<main>
+    <section class="products">
+        <h2>Sản phẩm</h2>
+        <ul>
+            <li th:each="product : ${productsList}">
+                <img th:src="@{/images/shirt1.jpg}" alt="Áo thun">
+                <h3 th:text="${product.getName()}"></h3>
+                <p th:text="'Giá: ' + ${product.getPrice()} + ' VNĐ'"></p>
+                <a href="#">Xem thêm</a>-->
+            </li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2>Liên hệ</h2>
+        <p>
+            Email: contact@example.com
+            Điện thoại: 0901234567
+            Địa chỉ: 123 Đường ABC, Quận 1, Thành phố Hồ Chí Minh
+        </p>
+    </section>
+</main>
+<footer>
+    <p>Copyright &copy; 2023</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* Định dạng tiêu đề và logo */
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Định dạng phần danh sách sản phẩm */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+li.product {
+  width: 25%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+img.product-image {
+  width: 100%;
+}
+
+h3.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+p.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+a.product-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Định dạng phần liên hệ */
+
+section.contact {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+h2.contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+p.contact-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Định dạng chung */
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Thêm hiệu ứng */
+
+.product:hover {
+  box-shadow: 0 0 10px 5px #000000;
+}
+
+a.product-link:hover {
+  color: #ff0000;
+}
