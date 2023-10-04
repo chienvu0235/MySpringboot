@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/loginCheck}" method="post" >
+    <div class="inputs">
+        <input type="text" placeholder="Username" name="email">
+        <br>
+        <input type="password" placeholder="Password" name="pass">
+    </div>
+
+    <br><br>
+
+    <div class="remember-me--forget-password">
+        <!-- Angular -->
+        <label>
+            <input type="checkbox" name="item" checked/>
+            <span class="text-checkbox">Remember me</span>
+        </label>
+        <a th:href="@{/forgot}">Forget password?</a>
+    </div>
+    <br>
+    <button type="submit" onclick="showAlert()" >Login</button>
+
+</form>
+
+<script>
+    function showAlert() {
+    console.log("1");
+        var loginSuccess = [[${loginSuccess}]];
+        var loginFalse = [[${loginFalse}]];
+        console.log("1");
+        if (loginSuccess) {
+            console.log("2");
+            alert("Login successful. Welcome, " + [[${name}]]);
+            return true;
+
+        } else if (loginFalse) {
+            console.log("3");
+            alert("Error: " + loginFalse);
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
