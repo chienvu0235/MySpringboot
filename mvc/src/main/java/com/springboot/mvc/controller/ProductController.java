@@ -18,26 +18,46 @@ public class ProductController {
                 new Product("Áo Khoác", 200000)
         );
         model.addAttribute("content", products);
-        return "index";
+        return "index"; // Tên file html
     }
 
-    @GetMapping("/test")
+    @GetMapping("/404")
     public String test(Model model) {
-        return "ManagerClass";
+        return "404";
     }
 
-    @GetMapping("/fashion")
-    public String fashion(Model model) {
-        return "fashion";
+    @GetMapping("/blog")
+    public String blog(Model model) {
+        return "blog";
     }
 
-    @GetMapping("/electronic")
-    public String electronic(Model model) {
-        return "electronic";
+    @GetMapping("/blog/single")
+    public String blogSingle(Model model) {
+        return "blog-single";
     }
 
-    @GetMapping("/jewellery")
-    public String jewellery(Model model) {
-        return "jewellery";
+    @GetMapping("/cart")
+    public String cart(Model model) {
+        return "cart";
+    }
+    @GetMapping("/checkout")
+    public String checkOut(Model model) {
+        return "checkout";
+    }
+    @GetMapping("/contact")
+    public String contact(Model model) {
+        return "contact-us";
+    }
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
+    @GetMapping("/product/details")
+    public String productDetail(Model model) {
+        return "product-details";
+    }
+    @GetMapping("/shop")
+    public String shop(Model model) {
+        return "shop";
     }
 }
